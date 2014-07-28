@@ -1,0 +1,10 @@
+{
+  "name": "staticserv",
+  "version": "0.1.0",
+  "dependencies": {
+    "browserify": "^5.0.7",
+    "express": "^4.6.1",
+    "open": "0.0.5",
+    "yargs": "^1.2.6"
+  }
+}
