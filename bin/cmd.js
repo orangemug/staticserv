@@ -23,6 +23,8 @@ if(argv.help) {
   process.exit(0);
 }
 
+argv.cwd = argv._[0];
+
 staticserv(argv, function(err, url, data) {
   console.log('Server started at: <%s>', url);
   for(var k in data) {
