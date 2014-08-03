@@ -1,6 +1,9 @@
 {
   "name": "staticserv",
   "version": "0.1.0",
+  "bin": {
+    "staticserv": "./bin/cmd.js"
+  },
   "dependencies": {
     "browserify": "^5.0.7",
     "express": "^4.6.1",
