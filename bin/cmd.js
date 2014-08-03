@@ -1,15 +1,18 @@
+#!/usr/bin/env node
 var open       = require('open');
 var yargs      = require('yargs');
 var staticserv = require('../');
 
+var defaults = require("../lib/defaults");
+
 var argv = yargs
   .usage('Start a static webserver with browserify and less support.\nUsage: $0 [opts] [path]')
   .describe("browserify", "Enable browserify")
-  .default("browserify", true)
+  .default("browserify", defaults.browserify)
   .describe("less", "Enable less")
-  .default("less", true)
+  .default("less", defaults.less)
   .describe("port", "Port to run server on, 0 picks random port")
-  .default("port", 0)
+  .default("port", defaults.port)
   .boolean("open")
   .describe("open", "Open a browser defaults to index.html")
   .describe("open-path", "Open a browser with the path")

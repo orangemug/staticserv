@@ -2,12 +2,17 @@ var path       = require('path');
 var express    = require('express');
 var browserify = require('browserify');
 var less       = require('less-middleware');
+var assign     = require('lodash.assign');
+
+var defaults = require("./lib/defaults");
 
 module.exports = function(opts, done) {
+  opts = assign(defaults, opts);
+
   // New server
   var app = express();
 
-  var serverPath = opts.cwd || process.cwd();
+  var serverPath = opts.cwd;
 
   // Start a static server
   app.use(express.static(serverPath));
