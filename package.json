@@ -4,7 +4,11 @@
   "dependencies": {
     "browserify": "^5.0.7",
     "express": "^4.6.1",
+    "less-middleware": "^1.0.3",
     "open": "0.0.5",
     "yargs": "^1.2.6"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.3"
   }
 }
