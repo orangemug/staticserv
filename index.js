@@ -12,16 +12,13 @@ module.exports = function(opts, done) {
   // New server
   var app = express();
 
-  var serverPath = opts.cwd;
-
-  // Start a static server
-  app.use(express.static(serverPath));
+  var serverPath = path.resolve(opts.cwd);
 
   // Browserify
   if(opts.browserify) {
-    app.get(serverPath+"/*.js", function(req, res) {
+    app.get("/*.js", function(req, res) {
       browserify()
-        .add(req.params[0]+".js")
+        .add(path.join(serverPath, req.params[0]+".js"))
         .bundle()
         .on("error", function(err) {
           console.error(err.toString())
@@ -33,6 +30,9 @@ module.exports = function(opts, done) {
   if(opts.less) {
     app.use(less(serverPath));
   }
+
+  // Start a static server
+  app.use(express.static(serverPath));
 
   // Start a server
   var server = app.listen(opts.port, function(err) {
