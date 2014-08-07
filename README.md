@@ -22,6 +22,12 @@ To run
       --open        Open a browser defaults to index.html
       --open-path   Open a browser with the path
 
+So to serve up a modules `examples` directory
+
+    staticserv examples/ --open
+      path: /path/to/examples
+      address: 0.0.0.0
+      port: 52790
 
 
 ## License
