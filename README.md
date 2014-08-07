@@ -1,5 +1,6 @@
-# staticserv
+# staticserv ![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)
 Start a static server with browserify and less support
+
 
 ## Install
 To install

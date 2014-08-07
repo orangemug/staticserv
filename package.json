@@ -1,5 +1,6 @@
 {
   "name": "staticserv",
+  "description": "Start a static server with browserify and less support.",
   "version": "0.1.0",
   "bin": {
     "staticserv": "./bin/cmd.js"
