@@ -35,11 +35,14 @@ module.exports = function(opts, done) {
   // Start a static server
   app.use(express.static(serverPath));
 
-  app.use(
-    serveIndex(serverPath, {
-      'icons': true
-    })
-  );
+  var indexMiddleware = serveIndex(serverPath, {
+    'icons': true,
+    'view': "details"
+  });
+
+  // Because otherwise you can't view files with index.html in them
+  app.use("/_asdir", indexMiddleware);
+  app.use(indexMiddleware);
 
   // Start a server
   var server = app.listen(opts.port, function(err) {
