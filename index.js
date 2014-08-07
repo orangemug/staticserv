@@ -15,12 +15,6 @@ module.exports = function(opts, done) {
 
   var serverPath = path.resolve(opts.cwd);
 
-  app.use(
-    serveIndex(serverPath, {
-      'icons': true
-    })
-  );
-
   // Browserify
   if(opts.browserify) {
     app.get("/*.js", function(req, res) {
@@ -40,6 +34,12 @@ module.exports = function(opts, done) {
 
   // Start a static server
   app.use(express.static(serverPath));
+
+  app.use(
+    serveIndex(serverPath, {
+      'icons': true
+    })
+  );
 
   // Start a server
   var server = app.listen(opts.port, function(err) {
