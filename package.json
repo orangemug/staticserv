@@ -10,6 +10,7 @@
     "less-middleware": "^1.0.3",
     "lodash.assign": "^2.4.1",
     "open": "0.0.5",
+    "serve-index": "^1.1.5",
     "yargs": "^1.2.6"
   },
   "devDependencies": {

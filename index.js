@@ -3,6 +3,7 @@ var express    = require('express');
 var browserify = require('browserify');
 var less       = require('less-middleware');
 var assign     = require('lodash.assign');
+var serveIndex = require('serve-index');
 
 var defaults = require("./lib/defaults");
 
@@ -13,6 +14,12 @@ module.exports = function(opts, done) {
   var app = express();
 
   var serverPath = path.resolve(opts.cwd);
+
+  app.use(
+    serveIndex(serverPath, {
+      'icons': true
+    })
+  );
 
   // Browserify
   if(opts.browserify) {
