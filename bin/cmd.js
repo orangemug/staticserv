@@ -23,6 +23,10 @@ if(argv.help) {
   process.exit(0);
 }
 
+if(argv.browserify === "false") {
+  argv.browserify = false;
+}
+
 argv.cwd = argv._[0] || defaults.cwd;
 
 staticserv(argv, function(err, url, data) {
