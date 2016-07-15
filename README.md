@@ -1,4 +1,4 @@
-# staticserv ![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)
+# staticserv
 Start a static server with browserify and less support
 
 [![stability-unstable](https://img.shields.io/badge/stability-unstable-yellow.svg)][stability]
