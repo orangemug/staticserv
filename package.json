@@ -6,13 +6,13 @@
     "staticserv": "./bin/cmd.js"
   },
   "dependencies": {
-    "browserify": "^5.0.7",
+    "browserify": "^13.0.1",
     "express": "^4.6.1",
-    "less-middleware": "^1.0.3",
-    "lodash.assign": "^2.4.1",
+    "less-middleware": "^2.2.0",
+    "lodash.assign": "^4.0.9",
     "open": "0.0.5",
-    "serve-index": "^1.1.5",
-    "yargs": "^1.2.6"
+    "serve-index": "^1.8.0",
+    "yargs": "^4.8.0"
   },
   "devDependencies": {
     "mocha": "^1.21.3"
