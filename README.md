@@ -1,11 +1,19 @@
 # staticserv ![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)
 Start a static server with browserify and less support
 
+[![stability-unstable](https://img.shields.io/badge/stability-unstable-yellow.svg)][stability]
+[![Dependency Status](https://david-dm.org/orangemug/staticserv.svg)][dm-prod]
+[![Dev Dependency Status](https://david-dm.org/orangemug/staticserv/dev-status.svg)][dm-dev]
+
+[stability]:   https://github.com/orangemug/stability-badges#unstable
+[dm-prod]:     https://david-dm.org/orangemug/staticserv
+[dm-dev]:      https://david-dm.org/orangemug/staticserv#info=devDependencies
+
 
 ## Install
 To install
 
-    npm install -g git+https://github.com/orangemug/staticserv.git
+    npm install -g orangemug/staticserv
 
 
 ## Usage
@@ -31,5 +39,4 @@ So to serve up a modules `examples` directory
 
 
 ## License
-MIT
-
+[MIT](LICENSE)
